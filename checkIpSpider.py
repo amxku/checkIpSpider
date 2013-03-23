@@ -8,9 +8,9 @@ from threadpool import ThreadPool
 def getIpHostName(arg):
     try:
         botkey = ['baidu','google','yahoo','msn']
-        handle = socket.gethostbyaddr(arg.strip())[0]
+        handle = socket.gethostbyaddr(arg)[0]
         if any(x in handle for x in botkey):
-            print "%s-%s\n" % (arg.strip(),handle.split('.')[-2])
+            print "%s-%s\n" % (arg,handle.split('.')[-2])
     except socket.herror:
         pass
 
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # 开始线程操作
     tp = ThreadPool(10)
     for cip in ipfiles.xreadlines():
-        tp.push(getIpHostName, cip)
+        tp.push(getIpHostName, cip.strip())
     tp.wait()
     ipfiles.close()
     print tp.busy()

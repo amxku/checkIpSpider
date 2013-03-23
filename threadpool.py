@@ -1,12 +1,10 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-
 """
 Generic thread pool class. Modeled after Java's ThreadPoolExecutor.
 Please note that this ThreadPool does *not* fully implement the PEP 3148
 ThreadPool!
 """
-
 from threading import Thread, Lock, currentThread, Event, Semaphore
 from weakref import ref
 import atexit

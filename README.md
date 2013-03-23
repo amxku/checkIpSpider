@@ -1,7 +1,7 @@
 check ip is spider
 =======
 
-checkIpSpider v0.1
+checkIpSpider
 
 amxku@sebug.net
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-# check ip is spider / amxku@sebug.net  / 2012-03-22 / v0.2
+# check ip is spider  /  amxku@sebug.net  /  2012-03-22 / v0.2
 #
 import time,socket
 from threadpool import ThreadPool

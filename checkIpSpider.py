@@ -19,6 +19,7 @@ def getIpHostName(arg):
 if __name__ == "__main__":
     starttime = time.time()
     ipfiles = open('ip_list.txt', 'r')
+
     # 开始线程操作
     tp = ThreadPool(10)
     for cip in ipfiles.xreadlines():
